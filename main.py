@@ -1,3 +1,15 @@
+# pip install PYQt5
+# pip install PyQtWebEngine
+
+from PyQt5.QtCore import *
+from PyQt5.QtWebEngineWidgets import *
+from PyQt5.QtWidgets import *
+import sys
+
+
+
+
+
 class MainWindow(QMainWindow):
 
     def __init__(self):
@@ -50,3 +62,13 @@ class MainWindow(QMainWindow):
     self.url_bar.returnPressed.connect(self.navigateToUrl)
     navbar.addWidget(self.url_bar)
     self.browser.urlChanged.connect(self.updateUrl)
+
+    
+    
+    app = QApplication(sys.argv)
+    QApplication.setApplicationName = ("Agrim's Browser")
+    window = MainWindow
+    app.exec_()
+    
+    
+    
